@@ -129,7 +129,7 @@
 <main>
 
   <div class="intro">
-    <p><strong>Short summary:</strong> Wage Tracker does not collect, transmit, or share any personal data. Everything stays on your device. No accounts. No analytics. No ads.</p>
+    <p><strong>Short summary:</strong> Wage Tracker stores all your personal work data locally on your device only. The app sends two types of anonymous, non-financial data to our own private server &mdash; <strong>usage events</strong> (which screens/features you use) and <strong>crash reports</strong> &mdash; to help us improve the app. No financial data ever leaves your device. No third-party analytics. No ads.</p>
   </div>
 
   <h2>1. About This Policy</h2>
@@ -137,8 +137,9 @@
   <p>By installing or using the App, you acknowledge that you have read and understood this policy.</p>
 
   <h2>2. Information We Collect</h2>
-  <p>Wage Tracker is a fully <strong>offline</strong> application. We do not collect, receive, store on our servers, or otherwise process any personal information from you.</p>
-  <p>The following data is stored <strong>locally on your device only</strong> and is never transmitted anywhere:</p>
+
+  <h3>2a. Data stored locally on your device</h3>
+  <p>The following personal/financial data is stored <strong>only on your device</strong> and is never transmitted to us:</p>
   <table>
     <thead>
       <tr><th>Data type</th><th>Stored where</th><th>Sent to us?</th></tr>
@@ -173,18 +174,49 @@
   </table>
   <p>No user accounts, sign-in, or registration are required or available.</p>
 
+  <h3>2b. Data collected automatically (anonymous)</h3>
+  <p>The app sends two types of non-personal, non-financial data to our own private server hosted on Oracle Cloud (EU region):</p>
+  <table>
+    <thead>
+      <tr><th>Type</th><th>What is collected</th><th>Purpose</th><th>Where stored</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Usage events</strong></td>
+        <td>Anonymised event names (e.g. &ldquo;screen_view&rdquo;, &ldquo;export_pressed&rdquo;), optional context (e.g. which screen), app version, Android OS version, device manufacturer &amp; model</td>
+        <td>Understand how the app is used and which features matter most</td>
+        <td>Our private PostgreSQL database on Oracle Cloud</td>
+      </tr>
+      <tr>
+        <td><strong>Crash reports</strong></td>
+        <td>Stack trace, error message, app version, Android OS version, device manufacturer &amp; model</td>
+        <td>Detect, diagnose, and fix crashes and bugs</td>
+        <td>Our private PostgreSQL database on Oracle Cloud</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Each device is identified by a <strong>pseudonymous ID</strong> (a one-way SHA-256 hash of the Android device ID). This ID cannot be reversed to identify you personally and is never linked to your name, email, or financial data.</p>
+  <p><strong>No wages, earnings, session records, job profiles, or tax data are ever included in these transmissions.</strong></p>
+
   <h2>3. How We Use Information</h2>
-  <p>Because we do not collect any personal information, we do not use it in any way. All data described in Section 2 remains on your device and is used solely by the App to provide its features to you locally.</p>
+  <p>Your personal and financial data (Section 2a) never leaves your device — we do not use it in any way.</p>
+  <p>The anonymous data collected by Firebase (Section 2b) is used solely to:</p>
+  <ul>
+    <li>Understand which app features are used most, so we can improve them</li>
+    <li>Detect, diagnose, and fix crashes and bugs</li>
+    <li>Make informed decisions about future app updates</li>
+  </ul>
+  <p>This data is never used for advertising, profiling, or any commercial purpose beyond improving the app.</p>
 
   <h2>4. Data Sharing and Disclosure</h2>
-  <p>We do <strong>not</strong> share, sell, rent, trade, or disclose any of your data to any third party &mdash; because we never receive it in the first place.</p>
-  <p>The App does not include:</p>
+  <p>We do <strong>not</strong> sell, rent, or trade your data. The anonymous usage events and crash reports described in Section 2b are stored exclusively on our own private server (Oracle Cloud). We do not share this data with any third party.</p>
+  <p>Specifically, the App does <strong>not</strong> include:</p>
   <ul>
-    <li>Third-party analytics (e.g. Firebase Analytics, Mixpanel, Amplitude)</li>
+    <li>Google Firebase Analytics or Crashlytics</li>
     <li>Advertising SDKs (e.g. Google AdMob, Meta Audience Network)</li>
-    <li>Crash-reporting services that upload data (e.g. Crashlytics, Sentry)</li>
     <li>Social media login or sharing SDKs</li>
-    <li>Any cloud-sync or remote backup functionality</li>
+    <li>Any cloud-sync or remote backup of your financial data</li>
+    <li>Any other third-party analytics or crash-reporting SDKs</li>
   </ul>
 
   <h2>5. App Permissions</h2>
