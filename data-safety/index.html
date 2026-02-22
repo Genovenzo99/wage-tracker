@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Safety – Wage Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #f5f5f5;
+      color: #212121;
+      line-height: 1.7;
+    }
+    header {
+      background: #1565C0;
+      color: #fff;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.8rem; margin-bottom: 4px; }
+    header p  { font-size: 0.95rem; opacity: 0.85; }
+    main {
+      max-width: 780px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 40px 48px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    }
+    h2 { font-size: 1.15rem; color: #1565C0; margin: 28px 0 10px; }
+    p, li { font-size: 0.97rem; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    a { color: #1565C0; }
+    /* Safety table */
+    .safety-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 0.93rem;
+    }
+    .safety-table th {
+      background: #1565C0;
+      color: #fff;
+      text-align: left;
+      padding: 10px 14px;
+    }
+    .safety-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .safety-table tr:last-child td { border-bottom: none; }
+    .safety-table tr:nth-child(even) td { background: #F5F5F5; }
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .badge-no  { background: #E8F5E9; color: #2E7D32; }
+    .badge-yes { background: #FFF3E0; color: #E65100; }
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: #757575;
+    }
+    nav { text-align: center; padding: 16px; background: #E3F2FD; }
+    nav a { margin: 0 12px; color: #1565C0; text-decoration: none; font-size: 0.9rem; }
+    nav a:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      main { padding: 24px 20px; margin: 16px; }
+      .safety-table { font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Data Safety</h1>
+  <p>Wage Tracker – Last updated: February 22, 2026</p>
+</header>
+
+<nav>
+  <a href="../privacy-policy/">Privacy Policy</a>
+  <a href="../terms-of-service/">Terms of Service</a>
+  <a href="../data-safety/">Data Safety</a>
+  <a href="../contact/">Contact</a>
+</nav>
+
+<main>
+  <p>This page mirrors the data safety information provided on the Google Play Store listing for <strong>Wage Tracker</strong>. It explains what data the app collects, how it is used, and how it is protected.</p>
+
+  <h2>Summary</h2>
+  <table class="safety-table">
+    <thead>
+      <tr>
+        <th>Practice</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Data shared with third parties</td><td><span class="badge badge-no">No data shared</span></td></tr>
+      <tr><td>Data collected by the app</td><td><span class="badge badge-no">No data collected</span></td></tr>
+      <tr><td>Data encrypted in transit</td><td><span class="badge badge-no">N/A – no data transmitted</span></td></tr>
+      <tr><td>Data can be deleted by user</td><td><span class="badge badge-yes">Yes</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Data Collected</h2>
+  <p>Wage Tracker does <strong>not</strong> collect any personal data. All information entered into the app (work sessions, wages, earnings, notes, profiles, tax settings) is stored locally on your device only and is never uploaded, transmitted, or shared with any server or third party.</p>
+
+  <h2>Data Stored on Device</h2>
+  <table class="safety-table">
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>Purpose</th>
+        <th>Encrypted</th>
+        <th>Deletable</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Work session records</td>
+        <td>Core app functionality – tracking hours and earnings</td>
+        <td>Device-level encryption (Android)</td>
+        <td>Yes – via app settings or uninstall</td>
+      </tr>
+      <tr>
+        <td>Wage &amp; job profile settings</td>
+        <td>Calculating session earnings</td>
+        <td>Device-level encryption (Android)</td>
+        <td>Yes – via app settings or uninstall</td>
+      </tr>
+      <tr>
+        <td>Tax profile settings</td>
+        <td>Providing net pay estimations</td>
+        <td>Device-level encryption (Android)</td>
+        <td>Yes – via app settings or uninstall</td>
+      </tr>
+      <tr>
+        <td>App preferences</td>
+        <td>Remembering user configuration (currency, rounding, etc.)</td>
+        <td>Device-level encryption (Android)</td>
+        <td>Yes – via app settings or uninstall</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Permissions</h2>
+  <table class="safety-table">
+    <thead>
+      <tr>
+        <th>Permission</th>
+        <th>Why It's Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>FOREGROUND_SERVICE</td>
+        <td>Keep the earnings timer running while the app is in the background</td>
+      </tr>
+      <tr>
+        <td>SCHEDULE_EXACT_ALARM / USE_EXACT_ALARM</td>
+        <td>Start and stop scheduled sessions at precise times</td>
+      </tr>
+      <tr>
+        <td>RECEIVE_BOOT_COMPLETED</td>
+        <td>Restore scheduled session alarms after device reboot</td>
+      </tr>
+      <tr>
+        <td>POST_NOTIFICATIONS</td>
+        <td>Display ongoing tracking notification (Android 13+)</td>
+      </tr>
+      <tr>
+        <td>WAKE_LOCK</td>
+        <td>Prevent the CPU from sleeping during active tracking</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Deleting Your Data</h2>
+  <p>You can delete all app data at any time by going to <strong>Android Settings → Apps → Wage Tracker → Storage → Clear Data</strong>, or by uninstalling the app. Both actions permanently remove all locally stored data.</p>
+
+  <h2>Contact</h2>
+  <p>For data-related inquiries please visit our <a href="../contact/">Contact page</a>.</p>
+</main>
+
+<footer>
+  &copy; 2026 Wage Tracker. All rights reserved.
+</footer>
+
+</body>
+</html>
